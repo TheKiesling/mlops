@@ -3,7 +3,7 @@ export default function Proyectos() {
     <div>
       <h1>Proyectos</h1>
       <ul>
-        <li><a href="https://github.com/thekiesling/mlops/proyectos">Proyectos</a></li>
+        <li><a href="https://github.com/thekiesling/mlops/tree/main/proyectos">Proyectos</a></li>
       </ul>
     </div>
   );

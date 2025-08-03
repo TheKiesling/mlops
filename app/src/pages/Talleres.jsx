@@ -3,7 +3,7 @@ export default function Talleres() {
     <div>
       <h1>Talleres</h1>
       <ul>
-        <li><a href="https://github.com/thekiesling/mlops/talleres">Talleres</a></li>
+        <li><a href="https://github.com/thekiesling/mlops/tree/main/talleres">Talleres</a></li>
       </ul>
     </div>
   );

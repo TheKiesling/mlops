@@ -3,7 +3,7 @@ export default function Laboratorios() {
     <div>
       <h1>Laboratorios</h1>
       <ul>
-        <li><a href="https://github.com/thekiesling/mlops/laboratorios">Laboratorios</a></li>
+        <li><a href="https://github.com/thekiesling/mlops/tree/main/laboratorios">Laboratorios</a></li>
       </ul>
     </div>
   );
