@@ -21,8 +21,8 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Subir artefacto para GitHub Pages
-        uses: actions/upload-pages-artifact@v1
+      - name: Upload pages artifact
+        uses: actions/upload-artifact@v4
         with:
           path: dist
 
