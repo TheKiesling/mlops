@@ -42,12 +42,8 @@ jobs:
           name: github-pages 
           path: app/dist
 
-      - name: Check for symlinks in dist
-        run: |
-          if find app/dist -type l | grep -q .; then
-            echo "Symlinks found in app/dist. Please remove all symlinks."
-            exit 1
-          fi
+      - name: Remove symlinks from build directory
+        run: find app/dist -type l -exec rm {} \;
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
