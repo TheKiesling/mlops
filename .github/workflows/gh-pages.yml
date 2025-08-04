@@ -16,8 +16,8 @@ concurrency:
 
 jobs:
   build-and-deploy:
-    environment: github-pages
     runs-on: ubuntu-latest
+    environment: github-pages
     steps:
       - uses: actions/checkout@v3
 
@@ -41,6 +41,13 @@ jobs:
         with:
           name: github-pages 
           path: app/dist
+
+      - name: Check for symlinks in dist
+        run: |
+          if find app/dist -type l | grep -q .; then
+            echo "Symlinks found in app/dist. Please remove all symlinks."
+            exit 1
+          fi
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
