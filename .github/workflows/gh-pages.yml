@@ -36,14 +36,14 @@ jobs:
           cd app
           npm run build
 
+      - name: Remove symlinks from build directory
+        run: find app/dist -type l -exec rm {} \;
+
       - name: Upload pages artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-pages 
           path: app/dist
-
-      - name: Remove symlinks from build directory
-        run: find app/dist -type l -exec rm {} \;
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
